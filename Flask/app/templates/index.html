@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> The dark {{user.username}} rises</h1>
+    {% for news in news %}
+    <div>
+        <h2> {{ news.article }}</h2>
+        <p> {{ news.body }} </p>
+        <p> by {{ news.author.username }} </p>
+        <hr>
+    </div>
+    {% endfor %}
+{% endblock %}
